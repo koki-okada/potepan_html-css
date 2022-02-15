@@ -231,7 +231,7 @@ main{
 }
 
 .FirstView{
-   background-image: url(image/top-hero.jpg);
+   background-image: url(https://github.com/koki-okada/potepan_html-css/blob/master/image/top-hero.jpg?raw=true);
    background-size: cover;
    background-position: center;
    padding-top: 100px;
