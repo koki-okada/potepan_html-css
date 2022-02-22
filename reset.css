@@ -1,421 +1,600 @@
-/*! destyle.css v3.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/*リセットCSS読み込み*/
+@import url("reset.css");
 
-/* Reset box-model and set borders */
-/* ============================================ */
 
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  border-style: solid;
-  border-width: 0;
+.Header{
+   width: 100%;
+   position: absolute;
+   padding-top: 20px;
+   /*background-color: pink;*/
 }
 
-/* Document */
-/* ============================================ */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- * 3. Remove gray overlay on links for iOS.
- */
-
-html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-  -webkit-tap-highlight-color: transparent; /* 3*/
+.HeaderContainer{
+   /*background-color: yellow;*/
+   display: flex;
+   margin: 0 36px 0 36px;
+   max-width: 100%;
+   justify-content: space-between;
+   position: relative;
 }
 
-/* Sections */
-/* ============================================ */
+.HeaderLogo_image{
+   width: auto;
+   height: 20px;
+   display: flex;
+   
 
-/**
- * Remove the margin in all browsers.
- */
-
-body {
-  margin: 0;
 }
 
-/**
- * Render the `main` element consistently in IE.
- */
-
-main {
-  display: block;
+.HeaderNavList{
+   align-items: center;
+   display: flex;
+   justify-content: space-between;
+   list-style: none;
+   height: 100%;
+   padding: 1px;
 }
 
-/* Vertical rhythm */
-/* ============================================ */
-
-p,
-table,
-blockquote,
-address,
-pre,
-iframe,
-form,
-figure,
-dl {
-  margin: 0;
-}
-
-/* Headings */
-/* ============================================ */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-  margin: 0;
-}
-
-/* Lists (enumeration) */
-/* ============================================ */
-
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* Lists (definition) */
-/* ============================================ */
-
-dt {
-  font-weight: bold;
-}
-
-dd {
-  margin-left: 0;
-}
-
-/* Grouping content */
-/* ============================================ */
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-  border-top-width: 1px;
-  margin: 0;
-  clear: both;
-  color: inherit;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: inherit; /* 2 */
-}
-
-address {
-  font-style: inherit;
-}
-
-/* Text-level semantics */
-/* ============================================ */
-
-/**
- * Remove the gray background on active links in IE 10.
- */
-
-a {
-  background-color: transparent;
-  text-decoration: none;
-  color: inherit;
-}
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-
-abbr[title] {
-  text-decoration: underline dotted; /* 2 */
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-code,
-kbd,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: inherit; /* 2 */
-}
-
-/**
- * Add the correct font size in all browsers.
- */
-
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/* Replaced content */
-/* ============================================ */
-
-/**
- * Prevent vertical alignment issues.
- */
-
-svg,
-img,
-embed,
-object,
-iframe {
-  vertical-align: bottom;
-}
-
-/* Forms */
-/* ============================================ */
-
-/**
- * Reset form fields to make them styleable.
- * 1. Make form elements stylable across systems iOS especially.
- * 2. Inherit text-transform from parent.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  -webkit-appearance: none; /* 1 */
-  appearance: none;
-  vertical-align: middle;
-  color: inherit;
-  font: inherit;
-  background: transparent;
-  padding: 0;
-  margin: 0;
-  border-radius: 0;
-  text-align: inherit;
-  text-transform: inherit; /* 2 */
-}
-
-/**
- * Reset radio and checkbox appearance to preserve their look in iOS.
- */
-
-[type="checkbox"] {
-  -webkit-appearance: checkbox;
-  appearance: checkbox;
-}
-
-[type="radio"] {
-  -webkit-appearance: radio;
-  appearance: radio;
-}
-
-/**
- * Correct cursors for clickable elements.
- */
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+.HeaderNavListItem a:hover{
+  filter: opacity(70%);
   cursor: pointer;
 }
 
-button:disabled,
-[type="button"]:disabled,
-[type="reset"]:disabled,
-[type="submit"]:disabled {
-  cursor: default;
+.HeaderNavListItem{
+   margin-right: 35px;
 }
 
-/**
- * Improve outlines for Firefox and unify style with input elements & buttons.
- */
-
-:-moz-focusring {
-  outline: auto;
+.HeaderNavListItem span{
+  display: block;
+  font-weight: 600;
+  text-align: center;
 }
 
-select:disabled {
-  opacity: inherit;
+.HeaderNavListItem_link{
+     display: block;
+     color: #000;
+     font-size: 13px;
 }
 
-/**
- * Remove padding
- */
 
-option {
-  padding: 0;
+.LowerRow{
+   font-size: 70%;
 }
 
-/**
- * Reset to invisible
- */
-
-fieldset {
-  margin: 0;
-  padding: 0;
-  min-width: 0;
+.HeaderNavListItem_button {
+    align-items: center;
+    background-color: #F79214;
+    border: none;
+    border-radius: 38px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+    font-weight: 600;
+    height: auto;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    padding: 15px 25px ;
 }
 
-legend {
-  padding: 0;
+/*チェックボックス等は非表示に*/
+    .nav-unshown {
+      display:none;
+    }
+
+
+@media screen and (max-width:1065px) {
+   
+   .page-top{
+		  display:block;
+		  flex-wrap: wrap;
+    }
+    
+   /*ハンバーガーメニュー*/
+    #nav-drawer {
+      position: relative;
+    }
+    
+    
+    
+    /*アイコンのスペース*/
+    #nav-open {
+      display: inline-block;
+      width: 30px;
+      height: 22px;
+      vertical-align: middle;
+    }
+    
+    /*ハンバーガーの形をCSSで表現*/
+    #nav-open span, #nav-open span:before, #nav-open span:after {
+      position: absolute;
+      height: 3px;/*線の太さ*/
+      width: 25px;/*長さ*/
+      border-radius: 3px;
+      background: #555;
+      display: block;
+      content: '';
+      cursor: pointer;
+    }
+    #nav-open span:before {
+      bottom: -8px;
+    }
+    #nav-open span:after {
+      bottom: -16px;
+    }
+    
+    /*閉じる用の薄黒箇所*/
+    #nav-close {
+      display: none;
+      position: fixed;
+      z-index: 99;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: 0;
+      transition: .3s ease-in-out;
+    }
+    
+    /*メニューの中身*/
+    #nav-content {
+      overflow: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      width: 90%;
+      max-width: 330px;
+      height: 100%;
+      background: #fff;
+      transition: .3s ease-in-out;
+      -webkit-transform: translateX(-105%);
+      transform: translateX(-105%);
+    }
+    
+    /*チェックがついたら表示させる*/
+    #nav-input:checked ~ #nav-close {
+      display: block;
+      opacity: .5;
+    }
+    
+    #nav-input:checked ~ #nav-content {
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+      box-shadow: 6px 0 25px rgba(0,0,0,.15);
+    }
+   .HeaderNavList{
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      /*background-color: orange;*/
+      list-style: none;
+      height: 100%;
+      padding: 1px;
+   }
+   
+   .HeaderNavListItem{
+      margin-right: 35px;
+   }
+   
+   .HeaderNavListItem_link{
+        display: block;
+        color: #000;
+        font-size: 13px;
+   }
+   
+   span {
+       display: block;
+       font-weight: 600;
+       text-align: center;
+   }
+   
+   .LowerRow{
+      font-size: 70%;
+   }
+   
+   .HeaderNavListItem_button {
+       align-items: center;
+       background-color: #F79214;
+       border: none;
+       border-radius: 38px;
+       color: #fff;
+       cursor: pointer;
+       display: flex;
+       flex-direction: column;
+       font-size: 11px;
+       font-weight: 600;
+       height: auto;
+       justify-content: center;
+       text-decoration: none;
+       text-align: center;
+       width: 100%;
+       padding: 15px 25px ;
+   }
+ }
+
+
+section{
+   display: block;
 }
 
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-  vertical-align: baseline;
+main{
+   display: block;
+   height: auto;
+   width: auto;
 }
 
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-
-textarea {
-  overflow: auto;
+@media screen and (max-width: 1080px){
+  main{
+    padding-top: 60px;
+  }
 }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
+.FirstView{
+   background-image: url(image/top-hero.jpg);
+   background-size: cover;
+   background-position: center;
+   padding-top: 100px;
+   padding-bottom: 28px;
 }
 
-/**
- * 1. Correct the outline style in Safari.
- */
-
-[type="search"] {
-  outline-offset: -2px; /* 1 */
+@media screen and (max-width: 767px){
+  .FirstView {
+      background-image: none;
+      padding-top: 0;
+      padding-bottom: 35px;
+  }
 }
 
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+.FirstView__main-image--sp{
+   display: none;   
 }
 
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Fix font inheritance.
- */
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+@media screen and (max-width: 767px){
+  .FirstView__main-image--sp {
+      display: block;
+  }
 }
 
-/**
- * Clickable labels
- */
 
-label[for] {
+
+.FirstView__main-image{
+   width: 100%;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+.FirstView_container{
+   max-width: 1140px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+@media screen and (max-width: 767px){
+  .FirstViewContent {
+      margin-bottom: 20px;
+      width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 767px){
+  .FirstView_container {
+      max-width: none;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: -45vw;
+      margin-right: auto;
+      margin-left: auto;
+  }
+}
+
+
+
+.FirstViewContent{
+   margin-bottom: 70px;
+   
+}
+
+.FirstViewContent_images{
+   text-align: center;
+   margin-bottom: 25px;
+   text-align: left;
+}
+
+@media screen and (max-width: 767px){
+  .FirstViewContent__images {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .FirstViewContent_images img:nth-of-type(2) {
+      width: 40%;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .FirstViewContent_images img {
+      width: 27.5%;
+  }
+}
+@media screen and (min-width: 767px){
+.FirstViewContent_title{
+   color: #000;
+   font-family: 'Lato', sans-serif;
+   font-size: 38px;
+   font-weight: 650;
+   margin-bottom: 15px;
+   text-align: center;
+   line-height: 54px;
+   margin-right: 500px;
+   white-space: nowrap;
+   width: 540px;
+}
+}
+
+@media screen and (max-width: 767px){
+  .FirstViewContent_title {
+      color: #000;
+      font-family: 'Lato', sans-serif;
+      font-weight: 650;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 25px;
+      line-height: 36px;
+      margin-left: calc(((100vw - 100%) / 2) * -1);
+      margin-right: calc(((100vw - 100%) / 2) * -1);
+  }
+}
+
+
+.FirstViewContent_buttons{
+   display: flex;
+}
+
+.FirstViewContent_buttons a:hover{
+  filter: opacity(90%);
   cursor: pointer;
 }
 
-/* Interactive */
-/* ============================================ */
-
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-
-details {
-  display: block;
+@media screen and (max-width: 767px){
+  .FirstViewContent_buttons {
+      flex-direction: column;
+  }
 }
 
-/*
- * Add the correct display in all browsers.
- */
-
-summary {
-  display: list-item;
+@media screen and (max-width: 767px){
+  .FirstViewContent_buttons a {
+      font-size: 14px;
+      width: 100% !important;
+  }
 }
 
-/*
- * Remove outline for editable content.
- */
-
-[contenteditable]:focus {
-  outline: auto;
+@media screen and (max-width: 767px){
+  .FirstViewContent_buttons a:first-of-type {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
 }
 
-/* Tables */
-/* ============================================ */
-
-/**
-1. Correct table border color inheritance in all Chrome and Safari.
-*/
-
-table {
-  border-color: inherit; /* 1 */
-  border-collapse: collapse;
+@media screen and (max-width: 767px){
+  .FirstViewContent_buttons a:last-of-type {
+      height: 45px;
+  }
 }
 
-caption {
-  text-align: left;
+/*ロゴやサイトタイトルをセンタリング*/
+.logo-area{text-align:center;margin:auto;}
+
+.FirstViewContent_buttons a {
+    align-items: center;
+    background-color: #F79214;
+    border: none;
+    border-radius: 38px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 700;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    height: 64px;
 }
 
-td,
-th {
-  vertical-align: top;
-  padding: 0;
+.FirstViewContent_buttons a:first-of-type {
+    margin-right: 15px;
+    width: 306px;
 }
 
-th {
-  text-align: left;
-  font-weight: bold;
+.FirstViewContent_buttons a:last-of-type {
+    background-color: #fff;
+    border: 1px solid #E0E0E0;
+    color: #000;
+    width: 176px;
+}
+
+
+.FirstViewCaption{
+   color: #A2A2A4;
+   font-size: 12px;
+   margin-left: 35px;
+   }
+   
+   .FirstViewCaption p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+   
+ .FirstViewCaption br{
+   color: #A2A2A4;
+   font-size: 12px;
+   }
+
+.AboutWrapper{
+   background-color:  #F79214;
+   padding: 45px 0;
+}
+
+@media screen and (max-width: 767px){
+  .AboutWrapper {
+      padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .About {
+      flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .About {
+      max-width: none;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+}
+
+.About{
+   max-width: 1140px;
+   padding-left: 50px;
+   padding-right: 50px;
+   margin-left: auto;
+   margin-right: auto;
+   position: relative;
+   align-items: center;
+   display: flex;
+   justify-content: space-between;
+   
+}
+
+.About_title {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    align-items: flex-start;
+    margin-bottom: 0;
+    width: 53%;
+    color: #fff;
+}
+
+.About_title h2{
+   font-size: 40px;
+   letter-spacing: 1px;
+   width: 100%;
+   text-align: center;
+}
+
+.About_title h2>span {
+    font-size: 50px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 1024px){
+  .About_title {
+      margin-bottom: 0;
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .About_title h2 {
+      font-size: 30px !important;
+      text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .About_title h2>span {
+      font-size: 33px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .About_title h2 span {
+      font-size: 30px;
+      letter-spacing: 1px;
+  }
+}
+
+ .About_title br{
+   display: none;
+}
+
+@media screen and (max-width: 767px){
+  .About_title br {
+      display: block;
+      display: none;
+  }
+}
+
+.About_title p{
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 25px;
+   margin-top: 15px;
+}
+
+.About_button{
+   width:  250px;
+}
+
+.About_button a {
+    align-items: center;
+    background-color: #F79214;
+    border: none;
+    border-radius: 38px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 700;
+    height: 64px;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    color: #F79214 !important;
+    background-color: #fff;
+}
+
+.About_button a span:first-child{
+   font-family: 'Lato', sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 32px;
+}
+
+.About_button a span:last-child{
+   font-size: 12px;
+   line-height: 18px;
+}
+
+@media screen and (max-width: 1024px){
+  .About_button {
+      margin-top: 40px;
+  }
 }
