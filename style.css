@@ -30,10 +30,14 @@
    align-items: center;
    display: flex;
    justify-content: space-between;
-   /*background-color: orange;*/
    list-style: none;
    height: 100%;
    padding: 1px;
+}
+
+.HeaderNavListItem a:hover{
+  filter: opacity(70%);
+  cursor: pointer;
 }
 
 .HeaderNavListItem{
@@ -231,7 +235,7 @@ main{
 }
 
 .FirstView{
-   background-image: url(https://github.com/koki-okada/potepan_html-css/blob/master/image/top-hero.jpg?raw=true);
+   background-image: url(image/top-hero.jpg);
    background-size: cover;
    background-position: center;
    padding-top: 100px;
@@ -276,22 +280,6 @@ img {
     position: relative;
 }
 
-
-@media screen and (max-width: 767px){
-  .FirstView_container {
-      margin-top: -45vw;
-  }
-}
-
-@media screen and (max-width: 767px){
-  .FirstView_container {
-      max-width: none;
-      padding-left: 20px;
-      padding-right: 20px;
-      margin-top: -45vw;
-  }
-}
-
 @media screen and (max-width: 767px){
   .FirstViewContent {
       margin-bottom: 20px;
@@ -300,14 +288,28 @@ img {
 }
 
 
+@media screen and (max-width: 767px){
+  .FirstView_container {
+      max-width: none;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: -45vw;
+      margin-right: auto;
+      margin-left: auto;
+  }
+}
+
+
+
 .FirstViewContent{
    margin-bottom: 70px;
-   width: fit-content;
+   
 }
 
 .FirstViewContent_images{
    text-align: center;
    margin-bottom: 25px;
+   text-align: left;
 }
 
 @media screen and (max-width: 767px){
@@ -330,7 +332,7 @@ img {
       width: 27.5%;
   }
 }
-
+@media screen and (min-width: 767px){
 .FirstViewContent_title{
    color: #000;
    font-family: 'Lato', sans-serif;
@@ -339,10 +341,19 @@ img {
    margin-bottom: 15px;
    text-align: center;
    line-height: 54px;
+   margin-right: 500px;
+   white-space: nowrap;
+   width: 540px;
+}
 }
 
 @media screen and (max-width: 767px){
   .FirstViewContent_title {
+      color: #000;
+      font-family: 'Lato', sans-serif;
+      font-weight: 650;
+      margin-bottom: 15px;
+      text-align: center;
       font-size: 25px;
       line-height: 36px;
       margin-left: calc(((100vw - 100%) / 2) * -1);
@@ -353,6 +364,11 @@ img {
 
 .FirstViewContent_buttons{
    display: flex;
+}
+
+.FirstViewContent_buttons a:hover{
+  filter: opacity(90%);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 767px){
